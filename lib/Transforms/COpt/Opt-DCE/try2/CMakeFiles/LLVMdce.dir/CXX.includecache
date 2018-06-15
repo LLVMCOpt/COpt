@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/Optimiser.cpp
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/Pass.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/IR/Function.h
+llvm/IR/Type.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/IR/Type.h
+llvm/IR/Instruction.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/IR/Instruction.h
+llvm/ADT/StringRef.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/ADT/StringRef.h
+llvm/Transforms/Utils/Local.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/Transforms/Utils/Local.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/Support/raw_ostream.h
+llvm/Analysis/LoopInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/Analysis/LoopInfo.h
+llvm/Analysis/LoopPass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-DCE/try2/source/llvm/Analysis/LoopPass.h
+cstring
+-
+

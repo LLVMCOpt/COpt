@@ -1,0 +1,5 @@
+opt : LoopUnrolling
+{
+	runOn(loop);
+	unrollLoop(loop, noLines < 10);
+}

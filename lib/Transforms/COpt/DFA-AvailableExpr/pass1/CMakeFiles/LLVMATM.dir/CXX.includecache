@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/referavex.cpp
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/Pass.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/IR/Function.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/Support/raw_ostream.h
+llvm/Analysis/CFG.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/Analysis/CFG.h
+llvm/IR/Instructions.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/IR/Instructions.h
+llvm/Transforms/Utils/BasicBlockUtils.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/snippet4/pass/llvm/Transforms/Utils/BasicBlockUtils.h
+llvm/IR/IRBuilder.h
+-
+llvm/IR/Module.h
+-
+llvm/IR/Function.h
+-
+iostream
+-
+unordered_map
+-
+set
+-
+vector
+-
+algorithm
+-
+

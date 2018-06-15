@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -fdata-sections  -Wl,-O3 -Wl,--gc-sections  -Wl,--version-script,/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/LLVMHello.cmake.exports -shared  -o lib/LLVMHello.cmake.so CMakeFiles/LLVMHello.cmake.dir/Hello.o 

@@ -1,0 +1,6 @@
+opt : TailCallElim
+{
+	runOn(function);
+	
+	tailcallelim(function, precondition : hasRecursiveTailCall(function));
+}

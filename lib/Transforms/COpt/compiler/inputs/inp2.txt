@@ -1,0 +1,24 @@
+opt : FunctionInlining // opt : ClassName
+{
+	runOn(module);	// module, function=cfg
+	
+	iterate : function	// function=cfg
+	{
+		makeInline(function);
+	}
+}
+
+opt : GlobalVN
+{
+	runOn(function);
+	
+	iterate : instruction, reversepostorder
+	{
+		valuenumber(instruction);
+	}
+	
+	eliminateInstructions(function);
+	
+	eraseUnusedInstructions();
+}
+

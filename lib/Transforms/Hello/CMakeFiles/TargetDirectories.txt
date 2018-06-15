@@ -1,0 +1,2 @@
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/CMakeFiles/LLVMHello.cmake_exports.dir
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/CMakeFiles/LLVMHello.cmake.dir

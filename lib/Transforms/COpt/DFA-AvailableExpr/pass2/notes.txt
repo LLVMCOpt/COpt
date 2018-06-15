@@ -1,0 +1,228 @@
+//GlobalVariable *gv = new GlobalVariable(I->getType(),false,GlobalValue::CommonLinkage,(Constant*)*same.begin(),"t");
+													//GlobalVariable *gv = new GlobalVariable(I->getType(),false,GlobalValue::CommonLinkage,0,"t");
+													//Constant* c= (Constant *)
+													//Instruction *ti = *same.begin();
+													//Constant* c= (Constant *)ti;
+													//gv->setInitializer(c);
+													//gv->getGlobalIdentifier()
+													/*
+													for (auto it = same.begin(), et = same.end(); it != et; ++it)
+													{
+														errs()<<"((first"<<**it<<"))\n===="<<*I<<"\n";
+														(*it)->setName("t");
+													}*/
+													
+													
+													
+													if (expr->op==q2->op)
+														{	//errs()<<" IMPPPP "<<*where[(*itera)->toString()];
+															if (LoadInst *LI1=dyn_cast<LoadInst>(expr->v1)) 
+															{
+																if (LoadInst *LI2 = dyn_cast<LoadInst>(expr->v2)) // 1
+																{
+																	if (LoadInst *newLI1=dyn_cast<LoadInst>(q2->v1))
+																	{
+																		if (LoadInst *newLI2=dyn_cast<LoadInst>(q2->v2))
+																		{
+																			if (LI1->getPointerOperand()==newLI1->getPointerOperand() && LI2->getPointerOperand()==newLI2->getPointerOperand())
+																			{
+																				same.push_back(where[q2->toString()]);
+																			}
+																		}
+																	}
+																}
+																else // 2
+																{
+																}
+															}
+															else
+															{
+																if (LoadInst *LI2 = dyn_cast<LoadInst>(expr->v2)) // 3
+																{
+																}
+																else // 4
+																{
+																}
+															}
+														}
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+if (c)
+{
+										std::vector<expati> terms;
+										std::vector<Instruction *> same;
+										int noOfPred = 0;
+										for (auto it = pred_begin(block), et = pred_end(block); it != et; ++it)
+										{
+											Instruction *terminst = (*it)->getTerminator();
+											if (terminst!=NULL)
+												terms.push_back(AvExF["foo"][InstrToIndex[terminst]]); 
+											++noOfPred;
+										}	errs()<<"NO OF PRED "<<noOfPred;
+										for (auto q1:terms)	// through previous basic blocks
+										{
+											for (auto q2:q1)	// through every exp in basic block
+											{
+												errs()<<q2->toString()<<" "<<q2->v1<<" "<<q2->v2;
+												errs()<<" "<<expr->v1<<" "<<expr->v2;
+												
+												if (expr->op==q2->op)
+												{	//errs()<<" IMPPPP "<<*where[(*itera)->toString()];
+													if (LoadInst *LI1=dyn_cast<LoadInst>(expr->v1)) 
+													{
+														if (LoadInst *LI2 = dyn_cast<LoadInst>(expr->v2)) // 1
+														{
+															if (LoadInst *newLI1=dyn_cast<LoadInst>(q2->v1))
+															{
+																if (LoadInst *newLI2=dyn_cast<LoadInst>(q2->v2))
+																{
+																	if (LI1->getPointerOperand()==newLI1->getPointerOperand() && LI2->getPointerOperand()==newLI2->getPointerOperand())
+																	{
+																		same.push_back(where[q2->toString()]);
+																	}
+																}
+															}
+														}
+														else // 2
+														{
+														}
+													}
+													else
+													{
+														if (LoadInst *LI2 = dyn_cast<LoadInst>(expr->v2)) // 3
+														{
+														}
+														else // 4
+														{
+														}
+													}
+												}
+											}
+											errs()<<"---\n";
+										}
+										if (noOfPred>1 && same.size()==noOfPred)
+										{
+											PHINode *phi;
+											phi->Create(I->getType(),0,"which",&*block->begin());
+											for (auto it = same.begin(), et = same.end(); it != et; ++it)
+												phi->addIncoming(*it,(*it)->getParent());
+											errs()<<"this?";
+											I->replaceAllUsesWith(phi);
+										}
+}
+
+
+
+
+std::vector<expati> terms;
+				int noOfPred = 0;
+				for (auto it = pred_begin(block), et = pred_end(block); it != et; ++it)
+						noOfPred++;
+				if (noOfPred>1)
+				{
+					for (auto it = pred_begin(block), et = pred_end(block); it != et; ++it)
+					{
+						Instruction *terminst = (*it)->getTerminator();
+						if (terminst!=NULL)
+							terms.push_back(AvExF[F.getName().str()][InstrToIndex[terminst]]); 
+						++noOfPred;					
+					}
+					for (void *ele : domain)
+					{
+						Expression *elem = (Expression *)ele;
+						int no = checkExpr(elem);
+						if (where[elem->toString()]->getParent()==block)
+						{
+							for (auto q1:terms)
+							{
+								for (auto q2:q1)
+								{
+									errs()<<"q2 : "<<q2->toString()<<" elem : "<<elem->toString()<<"\n";
+									if (checkExpr(q2)==no && compareExpr(elem,q2,no))
+									{
+										errs()<<"q2 : "<<q2->toString()<<" elem : "<<elem->toString();
+									}
+								}
+							}
+						}
+					}
+				}
+
+
+
+
+
+
+DSL
+path paths[] = pathInit(i,mostRecentOccurrence(e),-1);	// pathInit takes start and end instructions, -1 -> reverse
+																			// mostRecentOccurrence finds most recent use of e
+					path p;	// path is a datatype that lets you hold a sequence of instructions in order 
+				
+					instruction tempi, i1, i2, i3;
+				
+					i1 = createInstruction(assign, newvar, i.rhs) 	// if i is b = a*5, i1 is t = a*5
+				
+					for (p in paths)
+					{
+						tempi = lastInstruction(p);	// change this to a function that lets you get any instruction in the path?
+													// getInstruction(p,-1) , -1 -> last instruction in the path
+
+						i2 = createInstruction(assign, tempi.lhs, i1.lhs)	// i2 is b = t
+										// createInstruction takes assign as first parameter, needs to account for fn calls, branches?
+					
+						replaceInstruction(tempi,i1+i2);	// + is for concatenating the two instructions
+					}
+				
+					i3 = createInstruction(assign, i.lhs, i1.rhs);
+					replaceInstruction(i,i3);
+					
+					
+					
+//here
+				errs()<<"_______AFTER________________\n";
+				for (Function::iterator FI = F.begin(), FE = F.end(); FI != FE; ++FI) // basicblock b, for (b in c)
+				{
+					BasicBlock* block = &*FI;
+					checkNoOfBB = true;
+					
+					while(checkNoOfBB)
+					{
+						int noOfPred = 0;
+						for (auto it = pred_begin(block), et = pred_end(block); it != et; ++it)
+							noOfPred++;
+					}
+					/*
+					for (BasicBlock::iterator i = block->begin(), e = block->end(); i!=e; ++i)	// instruction i, for (i in b) 
+					{
+						Instruction * I = &*i;
+						ItoE temp = AvExF["foo"];			
+						expati etemp = temp[InstrToIndex[I]];	
+						errs()<<*I<<" ";
+						for (auto exi = etemp.begin(); exi!=etemp.end(); ++exi)
+						{
+							errs()<<(*exi)->toString()<<" ";
+						}	
+						errs()<<"\n";	
+					}
+					*/
+				}

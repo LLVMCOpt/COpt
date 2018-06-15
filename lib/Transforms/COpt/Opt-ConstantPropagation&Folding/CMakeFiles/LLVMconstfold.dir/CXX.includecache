@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/Optimiser.cpp
+llvm/Transforms/Scalar.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Transforms/Scalar.h
+llvm/Transforms/Utils/Local.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Transforms/Utils/Local.h
+llvm/ADT/Statistic.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/ADT/Statistic.h
+llvm/Analysis/ConstantFolding.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Analysis/ConstantFolding.h
+llvm/IR/Constant.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/IR/Constant.h
+llvm/IR/Instruction.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/IR/Instruction.h
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Pass.h
+llvm/Analysis/TargetLibraryInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Analysis/TargetLibraryInfo.h
+llvm/Transforms/Utils/BasicBlockUtils.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Transforms/Utils/BasicBlockUtils.h
+llvm/Analysis/LoopInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Analysis/LoopInfo.h
+llvm/Analysis/LoopPass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-ConstantPropagation&Folding/source/llvm/Analysis/LoopPass.h
+

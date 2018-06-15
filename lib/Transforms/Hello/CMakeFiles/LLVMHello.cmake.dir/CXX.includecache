@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/Hello.cpp
+llvm/ADT/Statistic.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/llvm/ADT/Statistic.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/llvm/IR/Function.h
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/llvm/Pass.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/Hello/llvm/Support/raw_ostream.h
+

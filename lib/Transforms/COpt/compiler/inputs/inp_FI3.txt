@@ -1,0 +1,7 @@
+opt : FunctionInlining	// opt : ClassName
+{
+	runOn(function);			// module, function=cfg
+	makeInline(function, noLines < 10, noUses < 5);
+	
+	//removeInlinedFunctions();
+}

@@ -1,0 +1,38 @@
+
+			for (LoopInfo::iterator i = LI.begin(), e=LI.end(); i != e; ++i)
+			{
+				Loop *L = *i;
+				std::vector<BasicBlock*> loopBlocks = L->getBlocks();
+				for (std::vector<BasicBlock*>::iterator blockIter = loopBlocks.begin(); blockIter != loopBlocks.end(); ++blockIter)
+				{
+					for (BasicBlock::iterator instIter = (*blockIter)->begin(), e = (*blockIter)->end(); instIter != e; ++instIter)
+					{
+						Value *v = &*instIter;
+						if (SE.isSCEVable(v->getType()))
+						{
+							const SCEV *chval = SE.getSCEV(v);
+							if (dyn_cast<SCEVAddRecExpr>(chval))
+								errs()<<"count---- "<<v->getName()<<" "<<*v<<"\n";
+						}
+					}
+				}
+			}
+			
+			
+			ScalarEvolution &SE = getAnalysis<ScalarEvolutionWrapperPass>().getSE();
+			
+			LoopInfo &LI = getAnalysis<LoopInfoWrapperPass>().getLoopInfo();
+			
+			DominatorTreeWrapperPass *DTWP = getAnalysisIfAvailable<DominatorTreeWrapperPass>();
+			DominatorTree *DT = DTWP ? &DTWP->getDomTree() : nullptr;
+			
+			SmallVector<WeakVH, 16> DeadInsts;
+			
+			for (LoopInfo::iterator i = LI.begin(), e=LI.end(); i != e; ++i)
+			{
+				Loop *L = *i;
+				simplifyLoopIVs(L, &SE, DT, &LI, DeadInsts);
+			}
+			
+stack :
+IndVarSimplify::run

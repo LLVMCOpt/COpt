@@ -1,0 +1,25 @@
+cat tests/fntest1.ll
+cat inputs/inp_FI1.txt
+compile inputs/inp_FI1.txt 
+run tests/fntest1.ll -fninline
+
+cat inputs/inp_FI2.txt
+compile inputs/inp_FI2.txt 
+
+
+cat tests/lutest1.ll
+cat inputs/inp_LU1.txt
+compile inputs/inp_LU1.txt
+run tests/lutest1.ll -loopunroll
+
+cat inputs/inp1.txt
+cat tests/lcsecfdcetest.ll
+compile inputs/inp1.txt
+run tests/lcsecfdcetest.ll -lcse -constprop
+run tests/lcsecfdcetest.ll -lcse -constprop -dce
+
+
+cat inputs/inp2.txt
+cat tests/fngvntest1.ll
+compile inputs/inp2.txt
+run tests/fngvntest1.ll -fninline -gvn

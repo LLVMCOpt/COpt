@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/Optimiser.cpp
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/Pass.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/IR/Function.h
+llvm/IR/Type.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/IR/Type.h
+llvm/IR/Instruction.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/IR/Instruction.h
+llvm/IR/DiagnosticInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/IR/DiagnosticInfo.h
+llvm/ADT/StringRef.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/ADT/StringRef.h
+llvm/Analysis/Loads.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/Analysis/Loads.h
+llvm/Analysis/InstructionSimplify.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/Analysis/InstructionSimplify.h
+llvm/Transforms/Utils/Local.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/Transforms/Utils/Local.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-TRE/source/llvm/Support/raw_ostream.h
+cstring
+-
+

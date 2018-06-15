@@ -1,0 +1,9 @@
+opt : LocalCSE	// opt : ClassName
+{
+	runOn(basicblock);			// basicblock
+	
+	dag : makeDAG(basicblock);
+
+	lcse(basicblock, dag, noExprs>=3);
+
+}

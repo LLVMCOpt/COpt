@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/AddToMultiply/opcode.cpp
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/AddToMultiply/llvm/Pass.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/AddToMultiply/llvm/IR/Function.h
+llvm/IR/Instruction.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/AddToMultiply/llvm/IR/Instruction.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/AddToMultiply/llvm/Support/raw_ostream.h
+map
+-
+cstring
+-
+

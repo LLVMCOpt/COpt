@@ -1,0 +1,16 @@
+all: 
+	./a.out < $(arg)
+
+a.out: lex.yy.c y.tab.c
+	gcc coptast.c coptsemantic.c lex.yy.c y.tab.c -ll
+	
+lex.yy.c: coptlexer.l
+	lex coptlexer.l
+
+y.tab.c: coptparser.y
+	yacc -d coptparser.y
+
+clean:
+	rm y.tab.*
+	rm a.out
+	rm lex.yy.c

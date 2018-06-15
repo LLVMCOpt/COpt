@@ -1,0 +1,12 @@
+opt : FunctionInlining	/* * **** * */
+{
+	runOn(function);			
+	
+	removeInlinedFunctions();
+	
+	iterate : module
+	{
+		makeInline(function, noUses < 5, noLines < 10);
+	} 
+	
+}

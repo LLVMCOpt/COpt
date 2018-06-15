@@ -1,0 +1,12 @@
+opt : GlobalCSE
+{
+	runOn(function); // module
+	
+	iterate : function
+	{
+	
+		availableexprs : findAvailableExpressionsInfo(function);
+	
+		gcse(function, availableexprs, noExprs>=3);
+	}
+}

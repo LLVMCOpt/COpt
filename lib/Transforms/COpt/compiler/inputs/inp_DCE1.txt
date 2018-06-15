@@ -1,0 +1,8 @@
+opt : DeadCodeElimination
+{
+	runOn(module);			// module, function=cfg, basicblock
+	repeat : 3
+	{
+		deadcodeelim();
+	}
+}

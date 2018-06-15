@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/FunctionInlining.cpp
+llvm/Analysis/AssumptionCache.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/AssumptionCache.h
+llvm/Analysis/CallGraph.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/CallGraph.h
+llvm/Analysis/InlineCost.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/InlineCost.h
+llvm/Analysis/ProfileSummaryInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/ProfileSummaryInfo.h
+llvm/Analysis/TargetLibraryInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/TargetLibraryInfo.h
+llvm/Analysis/TargetTransformInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Analysis/TargetTransformInfo.h
+llvm/IR/CallSite.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/CallSite.h
+llvm/IR/CallingConv.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/CallingConv.h
+llvm/IR/DataLayout.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/DataLayout.h
+llvm/IR/Instructions.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/Instructions.h
+llvm/IR/IntrinsicInst.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/IntrinsicInst.h
+llvm/IR/Module.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/Module.h
+llvm/IR/Type.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/IR/Type.h
+llvm/Transforms/IPO.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Transforms/IPO.h
+llvm/Transforms/IPO/Inliner.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-FunctionInlining/source/llvm/Transforms/IPO/Inliner.h
+

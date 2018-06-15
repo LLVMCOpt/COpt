@@ -1,0 +1,19 @@
+opt : LoopInvariantCodeMotion
+{
+	runOn(module); // module -> no runon loop because the statements need to be moved outside the loop
+	
+	iterate : function
+	{
+		reachingdefs : findReachingDefinitionsInfo(function);
+	
+		iterate : loop
+		{
+			loopinvstmts : findLoopInvariantStatements(loop, reachingdefs);
+		
+			motionstmts : findMotionCandidates(loop, loopinvstmts);
+		
+			applyCodeMotion(loop, motionstmts);
+		}
+	}
+	
+}

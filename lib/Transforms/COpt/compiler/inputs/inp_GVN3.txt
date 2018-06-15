@@ -1,0 +1,11 @@
+opt : GlobalVN
+{
+	runOn(function);
+	
+	iterate : instruction, reversepostorder
+	{
+		valuenumber(instruction);
+	}
+	
+	eliminateInstructions(function);
+}

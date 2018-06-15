@@ -1,0 +1,6 @@
+opt : IndVarSimplify	// opt : ClassName
+{
+	runOn(loop);			// loop
+	
+	indvarsimplify(loop);
+}

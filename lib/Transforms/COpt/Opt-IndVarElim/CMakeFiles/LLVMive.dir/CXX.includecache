@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/Optimiser.cpp
+llvm/Pass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Pass.h
+llvm/Analysis/LoopPass.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Analysis/LoopPass.h
+llvm/Analysis/LoopInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Analysis/LoopInfo.h
+llvm/Analysis/ScalarEvolution.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Analysis/ScalarEvolution.h
+llvm/Analysis/TargetTransformInfo.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Analysis/TargetTransformInfo.h
+llvm/IR/Function.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/IR/Function.h
+llvm/IR/Type.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/IR/Type.h
+llvm/IR/Instruction.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/IR/Instruction.h
+llvm/Transforms/Scalar.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Transforms/Scalar.h
+llvm/Transforms/Utils/Local.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Transforms/Utils/Local.h
+llvm/Transforms/Utils/LoopUtils.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Transforms/Utils/LoopUtils.h
+llvm/Transforms/Utils/SimplifyIndVar.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Transforms/Utils/SimplifyIndVar.h
+llvm/Support/raw_ostream.h
+/home/sruthi/LLVM/installed/llvm-4.0.0.src/lib/Transforms/CompOptDSL/Opt-IndVarElim/source/llvm/Support/raw_ostream.h
+cstring
+-
+map
+-
+iterator
+-
+

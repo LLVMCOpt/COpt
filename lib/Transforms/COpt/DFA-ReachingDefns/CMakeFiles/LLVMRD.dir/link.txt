@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -fdata-sections  -Wl,-O3 -Wl,--gc-sections -shared  -o lib/LLVMRD.so CMakeFiles/LLVMRD.dir/pass/derivetest.o 

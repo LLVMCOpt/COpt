@@ -1,0 +1,35 @@
+opt : LocalCSE	// opt : ClassName
+{
+	runOn(basicblock);			// basicblock
+	
+	dag : makeDAG(basicblock);
+
+	lcse(basicblock, dag, noExprs>=3);
+
+}
+
+opt : ConstantFolding	// opt : ClassName
+{
+	runOn(function);			// module, function=cfg, basicblock
+	
+	iterate : basicblock
+	{
+		iterate : instruction	// function=cfg, basicblock, instruction
+		{
+			foldpropagate(instruction, precondition : foldable(instruction));
+		}
+
+	}
+
+}
+
+opt : DeadCodeElimination
+{
+	runOn(module);			// module, function=cfg, basicblock
+	repeat : 1
+	{
+		deadcodeelim();
+	}
+}
+
+

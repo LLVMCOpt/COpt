@@ -1,0 +1,99 @@
+Dataflow Analyses :
+
+-AvailableExpressions
+-Liveness
+-ReachingDefns
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Optimisations :
+
+1. Loop Invariant Code Motion - Highly Complex					DONE
+2. Loop Unrolling - Highly Complex								DONE
+3. Global Value Numbering - Highly Complex						DONE
+4. Tail Recursion Elimination - Highly Complex					DONE
+5. Induction Variable Simplification - Highly Complex			DONE	done
+6. Aggressive Dead Code Elimination - Fairly Complex			DONE	done
+7. Global Common Subexpression Elimination - Fairly Complex		DONE	done
+8. Local Common Subexpression Elimination - Fairly Complex		DONE	done
+9. Function Inlining - Moderate									DONE	done
+Combine -
+10. Constant Propagation - Moderate								DONE	done
+11. Constant Folding - Very Easy								DONE	done
+
+----------------------------------------------------------------------------------------------------------------------------------------
+m2r - 10,11,6,8,1,3
+no m2r - 7,9,4,2
+
+----------------------------------------------------------------------------------------------------------------------------------------
+To-do :
+	1) GCSE - function to calculate bin exp
+	2) list out opts - figure out complexity
+	3) hashexp h - check out reaching defs, def use, all snippets
+	4) DCE - function to recheck for removed instructions to look for newly dead ones
+	5) reaching defs def use chains use def chains
+	
+	CLEAN UP - 
+	-> add comments
+	-> check for .cpp included, change to headers, make headers - GCSE (avex), LICM (reachingdefs)
+	-> remove extra files
+	-> rename if required
+	-> remove extra errs()
+	-> return true or false for the runOn functions
+	-> check output of optimised ir, compare with original
+	
+	RUN TESTS
+	
+	->documentation
+	->generate file in right place
+	
+reports -> change text in lit survey of final report for plagiarism check
+		-> design document : optimizations, change text
+		-> format, remove headers, certificate, page numbering
+		
+		allow erase : on
+----------------------------------------------------------------------------------------------------------------------------------------	
+	
+Q. why is llvm better than gcc?
+A. - LLVM has a more advanced architecture, allowing for better optimizations and faster compilation
+   - LLVM has complete IR which can be operated upon independently, gcc has less complete IR and phases of compilation are tightly coupled
+   - mix the compiler front-end with a targeted back-end and end up with highly portable and efficient compiler
+   - LLVM IR is language and target independent
+   
+Q. what is the need for this language?
+A. - LLVM is hard to learn, has multiple classes, pointers. DSL allows compiler writers to specify optimisations and gives them flexibility
+   - writing and debugging optimizations in a DSL will be easier than using the low level LLVM infrastructure
+   
+Q. LLVM IR for global variable and variable on stack ( function )
+A. int a = 5;		@a = global i32 5, align 4
+   void foo()
+   {
+   	int a = 5;		 %a = alloca i32, align 4
+  					 store i32 5, i32* %a, align 4
+   }
+   
+   languages for llvm ir, may be suif, whole pipeline, analogous to yacc
+----------------------------------------------------------------------------------------------------------------------------------------
+DCE -> opt -S -mem2reg -load lib/LLVMdce.so -dcelim test.ll
+pre : statement with one use
+post : remove it
+----------------------------------------------------------------------------------------------------------------------------------------
+Fn. Inlining -> opt -S -load lib/LLVMfnin.so -fninlining -always-inline -removefn test.ll
+threshold : number of lines and number of uses
+----------------------------------------------------------------------------------------------------------------------------------------
+Constant Folding and Propagation ->  opt -S -mem2reg -load lib/LLVMconstfold.so -constfold test.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+GCSE -> opt -S -load lib/LLVMav.so -available -gcse test.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+LCSE -> opt -S -mem2reg -load lib/LLVMlcse.so -lcse test.ll 
+----------------------------------------------------------------------------------------------------------------------------------------
+LICM -> opt -S -mem2reg -load lib/LLVMlicm.so -reachdefs -newlicm test.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+TRE -> opt -S -load lib/LLVMtail.so -tre test.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+LoopUnrolling -> opt -S -load lib/LLVMloopunroll.so -loopunroll test1.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+GVN -> opt -S -mem2reg -load lib/LLVMgvn.so -globalvn -dce test.ll
+----------------------------------------------------------------------------------------------------------------------------------------
+IVE -> opt -S -mem2reg -load lib/LLVMive.so -indvarelim test.ll
+threshold : no. of users
+----------------------------------------------------------------------------------------------------------------------------------------
